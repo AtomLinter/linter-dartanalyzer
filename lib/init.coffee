@@ -5,4 +5,4 @@ module.exports =
     dartanalyzerExecutablePath: null
 
   activate: ->
-    console.log 'activate linter-dart'
+    console.log 'activate linter-dartanalyzer'

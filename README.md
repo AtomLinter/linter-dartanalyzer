@@ -1,9 +1,9 @@
 # Linter Dart
 
-Provides linter support for Dart in Atom.
+Provides linter support for Dart in Atom via `dartanalyzer`.
 
 ## Installation
-Just run `apm install linter-dart` or install it from the settings view.
+Just run `apm install linter-dartanalyzer` or install it from the settings view.
 
 You must also have the [Linter](https://github.com/AtomLinter/Linter) package installed.
 You can install that by running `apm install linter` or installing the **linter** package in the settings view.
@@ -11,7 +11,7 @@ You can install that by running `apm install linter` or installing the **linter*
 ## Configuration
 You must set in your `config.cson` file the path of your Dart SDK bin folder like so...
 ```coffeescript
-'linter-dart':
+'linter-dartanalyzer':
   'dartanalyzerExecutablePath': 'C:\\Program Files\\dart-sdk\\bin'
 ```
 

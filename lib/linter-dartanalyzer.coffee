@@ -2,7 +2,7 @@ linterPath = atom.packages.getLoadedPackage("linter").path
 Linter = require "#{linterPath}/lib/linter"
 {findFile, warn} = require "#{linterPath}/lib/utils"
 
-class LinterDart extends Linter
+class LinterDartAnalyzer extends Linter
   # The syntax that the linter handles. May be a string or
   # list/tuple of strings. Names should be all lowercase.
   @syntax: 'source.dart'
@@ -30,10 +30,10 @@ class LinterDart extends Linter
     # if config
     #   @cmd = @cmd.concat ['-c', config]
 
-    atom.config.observe 'linter-dart.dartanalyzerExecutablePath', @formatShellCmd
+    atom.config.observe 'linter-dartanalyzer.dartanalyzerExecutablePath', @formatShellCmd
 
   formatShellCmd: =>
-    dartanalyzerExecutablePath = atom.config.get 'linter-dart.dartanalyzerExecutablePath'
+    dartanalyzerExecutablePath = atom.config.get 'linter-dartanalyzer.dartanalyzerExecutablePath'
     @executablePath = "#{dartanalyzerExecutablePath}"
 
   # createMessage: (match) ->
@@ -51,6 +51,6 @@ class LinterDart extends Linter
   #   "#{match.message} (#{type}, #{match.code})"
 
   destroy: ->
-    atom.config.unobserve 'linter-dart.dartanalyzerExecutablePath'
+    atom.config.unobserve 'linter-dartanalyzer.dartanalyzerExecutablePath'
 
-module.exports = LinterDart
+module.exports = LinterDartAnalyzer
