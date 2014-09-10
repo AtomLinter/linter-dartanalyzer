@@ -5,7 +5,7 @@
   "activationEvents": [],
   "version": "0.1.1",
   "description": "Dart linting plugin for Atom using dartanalyzer",
-  "repository": "https://github.com/austincummings/linter-dart",
+  "repository": "https://github.com/AtomLinter/linter-dart",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
