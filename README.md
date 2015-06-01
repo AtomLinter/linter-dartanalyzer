@@ -1,4 +1,6 @@
-# Linter Dart
+# Linter Dart (Inactive)
+
+**Please use the [dart-tools](https://atom.io/packages/dart-tools) instead**
 
 Provides linter support for Dart in Atom via `dartanalyzer`.
 
