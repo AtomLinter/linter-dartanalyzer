@@ -1,8 +1,8 @@
-path = require 'path'
-
 module.exports =
-  configDefaults:
-    dartanalyzerExecutablePath: null
+  config:
+    dartanalyzerExecutablePath:
+      type: 'string'
+      default: ''
 
   activate: ->
     console.log 'activate linter-dartanalyzer'
