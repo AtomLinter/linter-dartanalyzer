@@ -30,7 +30,7 @@ class LinterDartAnalyzer extends Linter
     # if config
     #   @cmd = @cmd.concat ['-c', config]
 
-    atom.config.observe 'linter-dartanalyzer.dartanalyzerExecutablePath', @formatShellCmd
+    @configSubscription = atom.config.observe 'linter-dartanalyzer.dartanalyzerExecutablePath', @formatShellCmd
 
   formatShellCmd: =>
     dartanalyzerExecutablePath = atom.config.get 'linter-dartanalyzer.dartanalyzerExecutablePath'
@@ -51,6 +51,7 @@ class LinterDartAnalyzer extends Linter
   #   "#{match.message} (#{type}, #{match.code})"
 
   destroy: ->
-    atom.config.unobserve 'linter-dartanalyzer.dartanalyzerExecutablePath'
+    super
+    @configSubscription.dispose()
 
 module.exports = LinterDartAnalyzer
