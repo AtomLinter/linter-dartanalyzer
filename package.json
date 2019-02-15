@@ -3,11 +3,27 @@
   "main": "./lib/init",
   "linter-package": true,
   "version": "0.3.2",
+  "private": true,
   "description": "Dart linting plugin for Atom using dartanalyzer",
   "repository": "https://github.com/AtomLinter/linter-dartanalyzer",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "renovate": {
+    "extends": [
+      "config:base"
+    ],
+    "semanticCommits": true,
+    "rangeStrategy": "pin",
+    "packageRules": [
+      {
+        "packagePatterns": [
+          "^eslint"
+        ],
+        "groupName": "ESLint packages"
+      }
+    ]
+  }
 }
